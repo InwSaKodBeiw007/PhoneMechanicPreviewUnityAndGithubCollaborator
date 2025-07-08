@@ -18,6 +18,7 @@ public class letmovethis : MonoBehaviour
     [SerializeField]
     GameObject choice1;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -53,6 +54,9 @@ public class letmovethis : MonoBehaviour
     Transform mainboard;
     private Vector3 mainboardOriginalPosition;
     Vector3 direction = new Vector3(0.5f, -1.75f, -7.14f);
+
+    [Header("Question")]
+    public GameObject qoute;
     IEnumerator moveMeaway() //Yes Yes Yes this way look cools!
     {
         Vector3 moveTarget = originalPosition + moveLength;
@@ -122,6 +126,11 @@ public class letmovethis : MonoBehaviour
         mainboard.position = movedirection;
 
         choice1.SetActive(true);
+        if (qoute != null)
+        {
+            qoute.SetActive(true);
+        }
+        GameObject.Destroy(ramsMinenono.gameObject);
     }
 
 }

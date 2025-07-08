@@ -61,11 +61,11 @@ public class firsttouchme : MonoBehaviour
 
         if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
         {
-            Somethingidk.SetActive(false);
+            GameObject.Destroy(Somethingidk);
         }
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
-            Somethingidk.SetActive(false);
+            GameObject.Destroy(Somethingidk);
         }
     }
 }
