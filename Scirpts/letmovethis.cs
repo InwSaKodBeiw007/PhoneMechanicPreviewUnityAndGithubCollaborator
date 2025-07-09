@@ -32,7 +32,7 @@ public class letmovethis : MonoBehaviour
         if (Touchscreen.current != null && Touchscreen.current.press.wasPressedThisFrame && !isTrigged)// ตอนแรก Input.touchCount > 1 ไง พอมาท่านี้เลยลดลงมา
         {
             handleMouseButton++;
-            if (handleMouseButton == 2)
+            if (handleMouseButton == 1)
             {
                 StartCoroutine(moveMeaway());
                 isTrigged = true;
